@@ -19,18 +19,20 @@ import java.io.PrintWriter;
                     "<body>" +
                     "<form method='post'>"+
                     "<label for=\"firstname\">First Name</label>"+
-        "<input id=\"firstname\" name=\"firstname\" type=\"text\" placeholder=\"enter your first name\" required>"+
-        "<label for=\"lastname\">Last Name</label>"+
-        "<input id=\"lastname\" name=\"lastname\" type=\"text\" placeholder=\"enter your last name\"required>"+
-        "<label for=\"DOB\">Date of Birth</label>"+
-        "<input for=\"DOB\" name=\"DOB\" type=\"date\" required>"+
-        "<label for=\"Gender\">Gender</label>"+
-        "<select name=\"Gender\" id=\"Gender\">"+
-            "<option value=\"Male\">Male</option>"+
-            "<option value=\"Female\">Female</option>"+
-        "</select>"+
-        "<button type=\"submit\">Register Child</button>"+
-        "</form>"+
+                    "<input id=\"firstname\" name=\"firstname\" type=\"text\" placeholder=\"enter your first name\" required>"+
+                    "<label for=\"lastname\">Last Name</label>"+
+                    "<input id=\"lastname\" name=\"lastname\" type=\"text\" placeholder=\"enter your last name\"required>"+
+                    "<label for=\"DOB\">Date of Birth</label>"+
+                    "<input for=\"DOB\" name=\"DOB\" type=\"date\" required>"+
+                    "<label for=\"Gender\">Gender</label>"+
+                    "<select name=\"Gender\" id=\"Gender\">"+
+                    "<option value=\"Male\">Male</option>"+
+                    "<option value=\"Female\">Female</option>"+
+                    "</select>"+
+                    //when the submit button is pressed, 'post' form will activate doPost method
+                    //and will return response to client
+                    "<button type=\"submit\">Register Child</button>"+
+                    "</form>"+
                     "</body>" +
                     "</hmtl>");
             writer.close();
@@ -44,7 +46,7 @@ import java.io.PrintWriter;
             writer.println("<html>" +
                     "<head><title>Registration Form Child</title></head>" +
                     "<body><h1>" +
-                    "Registration of: " +
+                    "Registration for: " +
                     req.getParameter("lastname").toUpperCase() + " is completed"+
                     "</h1></body>" +
                     "</hmtl>");
